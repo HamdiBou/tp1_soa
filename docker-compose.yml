@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  dev-environment:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: soa_tp_dev
+    volumes:
+      # Mount your workspace
+      - ./workspace:/workspace
+      # Mount Maven cache to speed up builds
+      - maven-cache:/root/.m2
+    ports:
+      # Spring Boot application
+      - "8090:8090"
+      # H2 Console
+      - "8088:8088"
+    environment:
+      - JAVA_OPTS=-Xmx512m
+    stdin_open: true
+    tty: true
+    networks:
+      - soa-network
+
+  # Optional: Separate H2 database service (if you want external H2)
+  h2-database:
+    image: oscarfonts/h2:latest
+    container_name: soa_h2_db
+    ports:
+      - "1521:1521"
+      - "8082:8082"
+    environment:
+      - H2_OPTIONS=-ifNotExists
+    volumes:
+      - h2-data:/opt/h2-data
+    networks:
+      - soa-network
+
+volumes:
+  maven-cache:
+  h2-data:
+
+networks:
+  soa-network:
+    driver: bridge

@@ -1,0 +1,87 @@
+openapi: 3.0.0
+info:
+  description: API pour gérer les plats et menus
+  title: Menu API
+  version: 1.0.0
+servers:
+- description: Development server
+  url: http://localhost:8080
+paths:
+  /menus/jour:
+    get:
+      operationId: getMenuDuJour
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Plat'
+                type: array
+          description: Menu du jour
+      summary: Consulter le menu du jour
+      x-accepts:
+      - application/json
+  /plats/{id}:
+    get:
+      operationId: getPlatById
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Plat'
+          description: Détails du plat
+        "404":
+          description: Plat non trouvé
+      summary: Consulter un plat
+      x-accepts:
+      - application/json
+  /plats:
+    get:
+      operationId: getAllPlats
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Plat'
+                type: array
+          description: Liste des plats
+      summary: Liste tous les plats
+      x-accepts:
+      - application/json
+components:
+  schemas:
+    Plat:
+      example:
+        price: 6.027456183070403
+        name: name
+        id: 0
+        disponible: true
+      properties:
+        id:
+          format: int64
+          type: integer
+        name:
+          type: string
+        price:
+          format: double
+          type: number
+        disponible:
+          description: Disponibilité (false si rupture de stock)
+          type: boolean
+      required:
+      - id
+      - name
+      - price
+      type: object

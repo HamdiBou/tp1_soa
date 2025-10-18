@@ -1,0 +1,117 @@
+package com.speed_liv.menu.controllers;
+
+import com.speed_liv.menu.model.entity.Restaurant;
+import com.speed_liv.menu.services.RestaurantService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
+
+/**
+ * REST Controller for Restaurant endpoints (API Layer in Hexagonal Architecture)
+ */
+@RestController
+@RequestMapping("/restaurants")
+@Tag(name = "Restaurant", description = "Restaurant management API")
+public class RestaurantController {
+
+    private final RestaurantService restaurantService;
+
+    @Autowired
+    public RestaurantController(RestaurantService restaurantService) {
+        this.restaurantService = restaurantService;
+    }
+
+    /**
+     * GET /restaurants
+     * Get all restaurants with their dishes
+     * 
+     * @return List of all restaurants
+     */
+    @Operation(summary = "Get all restaurants", description = "Returns a list of all restaurants with their available dishes")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Successfully retrieved list of restaurants",
+                     content = @Content(mediaType = "application/json", 
+                                       schema = @Schema(implementation = Restaurant.class))),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
+    @GetMapping
+    public ResponseEntity<List<Restaurant>> getAllRestaurants() {
+        List<Restaurant> restaurants = restaurantService.getAllRestaurants();
+        return ResponseEntity.ok(restaurants);
+    }
+
+    /**
+     * GET /restaurants/{id}
+     * Get a specific restaurant by ID
+     * 
+     * @param id the restaurant ID
+     * @return Restaurant details
+     */
+    @Operation(summary = "Get restaurant by ID", description = "Returns a single restaurant with its dishes")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Successfully retrieved restaurant",
+                     content = @Content(mediaType = "application/json", 
+                                       schema = @Schema(implementation = Restaurant.class))),
+        @ApiResponse(responseCode = "404", description = "Restaurant not found"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
+    @GetMapping("/{id}")
+    public ResponseEntity<Restaurant> getRestaurantById(@PathVariable Long id) {
+        return restaurantService.getRestaurantById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    /**
+     * POST /restaurants
+     * Create a new restaurant
+     * 
+     * @param restaurant the restaurant to create
+     * @return the created restaurant
+     */
+    @Operation(summary = "Create a new restaurant", description = "Creates a new restaurant with its dishes")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "201", description = "Restaurant created successfully",
+                     content = @Content(mediaType = "application/json", 
+                                       schema = @Schema(implementation = Restaurant.class))),
+        @ApiResponse(responseCode = "400", description = "Invalid input"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
+    @PostMapping
+    public ResponseEntity<Restaurant> createRestaurant(@Valid @RequestBody Restaurant restaurant) {
+        Restaurant savedRestaurant = restaurantService.saveRestaurant(restaurant);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedRestaurant);
+    }
+
+    /**
+     * DELETE /restaurants/{id}
+     * Delete a restaurant
+     * 
+     * @param id the restaurant ID to delete
+     * @return no content
+     */
+    @Operation(summary = "Delete a restaurant", description = "Deletes a restaurant by its ID")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "204", description = "Restaurant deleted successfully"),
+        @ApiResponse(responseCode = "404", description = "Restaurant not found"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+    })
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteRestaurant(@PathVariable Long id) {
+        if (!restaurantService.restaurantExists(id)) {
+            return ResponseEntity.notFound().build();
+        }
+        restaurantService.deleteRestaurant(id);
+        return ResponseEntity.noContent().build();
+    }
+}
