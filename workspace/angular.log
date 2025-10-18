@@ -1,0 +1,29 @@
+Warning: Running a server with --disable-host-check is a security risk. See https://medium.com/webpack/webpack-dev-server-middleware-security-issues-1489d950874a for more information.
+The "disableHostCheck" option will not be used because it is not supported by the "@angular-devkit/build-angular:application" builder.
+- Building...
+
+Initial chunk files | Names         |  Raw size
+polyfills.js        | polyfills     |  88.09 kB | 
+main.js             | main          |  29.92 kB | 
+styles.css          | styles        |  95 bytes | 
+
+                    | Initial total | 118.10 kB
+
+Application bundle generation complete. [16.944 seconds]
+
+▲ [WARNING] NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. [plugin angular-compiler]
+
+    src/app/app.component.html:30:56:
+      30 │ ...nt-info">{{ restaurant.plats?.length || 0 }} plats disponibles</p>
+         ╵                                  ~~~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:12:15:
+      12 │   templateUrl: './app.component.html',
+         ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
+Watch mode enabled. Watching for file changes...
+  ➜  Local:   http://localhost:4200/
+  ➜  Network: http://172.19.0.3:4200/

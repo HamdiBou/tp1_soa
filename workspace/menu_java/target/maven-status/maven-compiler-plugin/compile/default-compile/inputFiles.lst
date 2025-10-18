@@ -3,6 +3,7 @@
 /workspace/menu_java/src/main/java/org/openapitools/RFC3339DateFormat.java
 /workspace/menu_java/src/main/java/com/speed_liv/menu/model/entity/Plat.java
 /workspace/menu_java/src/main/java/com/speed_liv/menu/api/ApiUtil.java
+/workspace/menu_java/src/main/java/com/speed_liv/menu/config/CorsConfig.java
 /workspace/menu_java/src/main/java/com/speed_liv/menu/controllers/RestaurantController.java
 /workspace/menu_java/src/main/java/org/openapitools/OpenApiGeneratorApplication.java
 /workspace/menu_java/src/main/java/com/speed_liv/menu/model/entity/Restaurant.java

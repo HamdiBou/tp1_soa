@@ -4,13 +4,14 @@ com/speed_liv/menu/infrastructure/persistance/RestaurantRepositoryAdapter.class
 com/speed_liv/menu/model/Plat.class
 com/speed_liv/menu/infrastructure/persistance/JpaRestaurantRepository.class
 com/speed_liv/menu/services/RestaurantService.class
+com/speed_liv/menu/config/CorsConfig.class
 org/openapitools/configuration/HomeController.class
 com/speed_liv/menu/api/ApiUtil.class
 org/openapitools/RFC3339DateFormat.class
 com/speed_liv/menu/model/entity/Restaurant.class
 com/speed_liv/menu/infrastructure/persistance/RestaurantDataLoader$1.class
-org/openapitools/OpenApiGeneratorApplication.class
 org/openapitools/configuration/SpringDocConfiguration.class
+org/openapitools/OpenApiGeneratorApplication.class
 com/speed_liv/menu/api/PlatsApi.class
 com/speed_liv/menu/api/MenusApiController.class
 com/speed_liv/menu/infrastructure/persistance/RestaurantDataLoader.class

@@ -22,8 +22,21 @@ RUN curl -fsSL https://repo1.maven.org/maven2/org/openapitools/openapi-generator
 RUN echo '#!/bin/sh\njava -jar /usr/local/bin/openapi-generator-cli.jar "$@"' > /usr/local/bin/openapi-generator && \
     chmod +x /usr/local/bin/openapi-generator
 
-# Expose Spring Boot default port
-EXPOSE 8080
+# Install Node.js 20.x and npm
+ARG NODE_VERSION=20.11.0
+RUN curl -fsSL https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz -o node.tar.gz && \
+    tar -xzf node.tar.gz -C /opt && \
+    ln -s /opt/node-v${NODE_VERSION}-linux-x64 /opt/node && \
+    rm node.tar.gz
+
+ENV NODE_HOME=/opt/node
+ENV PATH="${NODE_HOME}/bin:${PATH}"
+
+# Install Angular CLI globally
+RUN npm install -g @angular/cli@17
+
+# Expose Spring Boot default port and Angular dev server port
+EXPOSE 8086 4200
 
 # Keep container running
 CMD ["/bin/bash"]
