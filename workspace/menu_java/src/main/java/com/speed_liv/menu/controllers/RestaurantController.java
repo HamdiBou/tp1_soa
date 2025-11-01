@@ -8,6 +8,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,12 +20,15 @@ import java.util.List;
 
 /**
  * REST Controller for Restaurant endpoints (API Layer in Hexagonal Architecture)
+ * Frontend-agnostic: Uses strategy pattern to switch data sources via configuration
  */
 @RestController
 @RequestMapping("/restaurants")
-@Tag(name = "Restaurant", description = "Restaurant management API")
+@Tag(name = "Restaurant", description = "Restaurant management API - data source configured via app.datasource.strategy")
 public class RestaurantController {
 
+    private static final Logger logger = LoggerFactory.getLogger(RestaurantController.class);
+    
     private final RestaurantService restaurantService;
 
     @Autowired
@@ -33,40 +38,38 @@ public class RestaurantController {
 
     /**
      * GET /restaurants
-     * Get all restaurants with their dishes
-     * 
-     * @return List of all restaurants
+     * Get all restaurants using configured strategy (JSON, H2, or BOTH)
+     * Frontend doesn't need to know which data source is used
      */
-    @Operation(summary = "Get all restaurants", description = "Returns a list of all restaurants with their available dishes")
+    @Operation(summary = "Get all restaurants", description = "Returns restaurants from configured data source (see app.datasource.strategy in application.properties)")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Successfully retrieved list of restaurants",
                      content = @Content(mediaType = "application/json", 
-                                       schema = @Schema(implementation = Restaurant.class))),
-        @ApiResponse(responseCode = "500", description = "Internal server error")
+                                       schema = @Schema(implementation = Restaurant.class)))
     })
     @GetMapping
     public ResponseEntity<List<Restaurant>> getAllRestaurants() {
+        logger.info("📡 API: GET /restaurants (using configured strategy)");
         List<Restaurant> restaurants = restaurantService.getAllRestaurants();
+        logger.info("📡 API: Returning {} restaurants", restaurants.size());
         return ResponseEntity.ok(restaurants);
     }
 
     /**
      * GET /restaurants/{id}
-     * Get a specific restaurant by ID
-     * 
-     * @param id the restaurant ID
-     * @return Restaurant details
+     * Get a specific restaurant by ID using configured strategy
+     * Frontend doesn't need to know which data source is used
      */
-    @Operation(summary = "Get restaurant by ID", description = "Returns a single restaurant with its dishes")
+    @Operation(summary = "Get restaurant by ID", description = "Returns a single restaurant from configured data source")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Successfully retrieved restaurant",
                      content = @Content(mediaType = "application/json", 
                                        schema = @Schema(implementation = Restaurant.class))),
-        @ApiResponse(responseCode = "404", description = "Restaurant not found"),
-        @ApiResponse(responseCode = "500", description = "Internal server error")
+        @ApiResponse(responseCode = "404", description = "Restaurant not found")
     })
     @GetMapping("/{id}")
     public ResponseEntity<Restaurant> getRestaurantById(@PathVariable Long id) {
+        logger.info("📡 API: GET /restaurants/{} (using configured strategy)", id);
         return restaurantService.getRestaurantById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());

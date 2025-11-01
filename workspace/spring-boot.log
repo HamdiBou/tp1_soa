@@ -11,11 +11,10 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Using 'UTF-8' encoding to copy filtered properties files.
 [INFO] Copying 1 resource
-[INFO] Copying 2 resources
+[INFO] Copying 3 resources
 [INFO] 
 [INFO] --- compiler:3.10.1:compile (default-compile) @ openapi-spring ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 20 source files to /workspace/menu_java/target/classes
+[INFO] Nothing to compile - all classes are up to date
 [INFO] 
 [INFO] --- resources:3.2.0:testResources (default-testResources) @ openapi-spring ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -23,8 +22,7 @@
 [INFO] skip non existing resourceDirectory /workspace/menu_java/src/test/resources
 [INFO] 
 [INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ openapi-spring ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to /workspace/menu_java/target/test-classes
+[INFO] Nothing to compile - all classes are up to date
 [INFO] 
 [INFO] <<< spring-boot:2.7.15:run (default-cli) < test-compile @ openapi-spring <<<
 [INFO] 
@@ -40,22 +38,22 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.15)
 
-2025-10-18 21:16:32.028  INFO 107 --- [           main] o.o.OpenApiGeneratorApplication          : Starting OpenApiGeneratorApplication using Java 17.0.16 on 74dfd5f994b8 with PID 107 (/workspace/menu_java/target/classes started by root in /workspace/menu_java)
-2025-10-18 21:16:32.045  INFO 107 --- [           main] o.o.OpenApiGeneratorApplication          : No active profile set, falling back to 1 default profile: "default"
-2025-10-18 21:16:41.777  INFO 107 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-18 21:16:42.793  INFO 107 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 869 ms. Found 1 JPA repository interfaces.
-2025-10-18 21:17:02.318  INFO 107 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2025-10-18 21:17:02.727  INFO 107 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-18 21:17:02.728  INFO 107 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
-2025-10-18 21:17:04.112  INFO 107 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-18 21:17:04.113  INFO 107 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 31286 ms
-2025-10-18 21:17:04.333  INFO 107 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-18 21:17:09.103  INFO 107 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-18 21:17:09.198  INFO 107 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:restaurantdb'
-2025-10-18 21:17:12.536  INFO 107 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-18 21:17:13.954  INFO 107 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
-2025-10-18 21:17:17.393  INFO 107 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2025-10-18 21:17:20.686  INFO 107 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2025-11-01 10:07:24.109  INFO 647 --- [           main] o.o.OpenApiGeneratorApplication          : Starting OpenApiGeneratorApplication using Java 17.0.16 on 9807376d4a60 with PID 647 (/workspace/menu_java/target/classes started by root in /workspace/menu_java)
+2025-11-01 10:07:24.122  INFO 647 --- [           main] o.o.OpenApiGeneratorApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-11-01 10:07:29.506  INFO 647 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-01 10:07:30.206  INFO 647 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 628 ms. Found 1 JPA repository interfaces.
+2025-11-01 10:07:37.316  INFO 647 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2025-11-01 10:07:37.383  INFO 647 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-01 10:07:37.384  INFO 647 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.79]
+2025-11-01 10:07:37.942  INFO 647 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-01 10:07:37.943  INFO 647 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13590 ms
+2025-11-01 10:07:38.124  INFO 647 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-01 10:07:40.656  INFO 647 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-01 10:07:40.714  INFO 647 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:restaurantdb'
+2025-11-01 10:07:42.082  INFO 647 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-01 10:07:43.086  INFO 647 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-01 10:07:44.928  INFO 647 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-01 10:07:46.965  INFO 647 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 Hibernate: 
     
     drop table if exists plats CASCADE 
@@ -85,11 +83,13 @@ Hibernate:
        add constraint FKclwvkcur6u0b8h0wk7uhodj1o 
        foreign key (restaurant_id) 
        references restaurants
-2025-10-18 21:17:36.096  INFO 107 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2025-10-18 21:17:36.329  INFO 107 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-18 21:17:44.352  WARN 107 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-18 21:17:51.291  INFO 107 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2025-10-18 21:17:51.342  INFO 107 --- [           main] o.o.OpenApiGeneratorApplication          : Started OpenApiGeneratorApplication in 84.342 seconds (JVM running for 87.661)
+2025-11-01 10:07:56.975  INFO 647 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-01 10:07:57.150  INFO 647 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-01 10:08:00.735  INFO 647 --- [           main] .s.m.i.p.JsonRestaurantRepositoryAdapter : ✅ Loaded 2 restaurants from JSON file
+2025-11-01 10:08:00.738  INFO 647 --- [           main] c.s.menu.services.RestaurantService      : 🔧 RestaurantService initialized with strategy: JSON
+2025-11-01 10:08:02.203  WARN 647 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-01 10:08:06.615  INFO 647 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2025-11-01 10:08:06.646  INFO 647 --- [           main] o.o.OpenApiGeneratorApplication          : Started OpenApiGeneratorApplication in 45.923 seconds (JVM running for 47.595)
 Hibernate: 
     select
         restaurant0_.id as id1_1_1_,
@@ -153,6 +153,24 @@ Hibernate:
         (default, ?, ?, ?, ?)
 Hibernate: 
     select
+        plat0_.id as id1_0_0_,
+        plat0_.disponible as disponib2_0_0_,
+        plat0_.name as name3_0_0_,
+        plat0_.price as price4_0_0_,
+        plat0_.restaurant_id as restaura5_0_0_ 
+    from
+        plats plat0_ 
+    where
+        plat0_.id=?
+Hibernate: 
+    insert 
+    into
+        plats
+        (id, disponible, name, price, restaurant_id) 
+    values
+        (default, ?, ?, ?, ?)
+Hibernate: 
+    select
         restaurant0_.id as id1_1_1_,
         restaurant0_.name as name2_1_1_,
         plats1_.restaurant_id as restaura5_0_3_,
@@ -212,999 +230,91 @@ Hibernate:
         (id, disponible, name, price, restaurant_id) 
     values
         (default, ?, ?, ?, ?)
-2025-10-18 21:17:54.222  INFO 107 --- [           main] c.s.m.i.p.RestaurantDataLoader           : Successfully loaded 2 restaurants from JSON file
-2025-10-18 21:42:09.255  INFO 107 --- [nio-8088-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-18 21:42:09.271  INFO 107 --- [nio-8088-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-18 21:42:09.419  INFO 107 --- [nio-8088-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 147 ms
 Hibernate: 
     select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
+        plat0_.id as id1_0_0_,
+        plat0_.disponible as disponib2_0_0_,
+        plat0_.name as name3_0_0_,
+        plat0_.price as price4_0_0_,
+        plat0_.restaurant_id as restaura5_0_0_ 
     from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
+        plats plat0_ 
     where
-        plats0_.restaurant_id=?
+        plat0_.id=?
+Hibernate: 
+    insert 
+    into
+        plats
+        (id, disponible, name, price, restaurant_id) 
+    values
+        (default, ?, ?, ?, ?)
 Hibernate: 
     select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
+        restaurant0_.id as id1_1_1_,
+        restaurant0_.name as name2_1_1_,
+        plats1_.restaurant_id as restaura5_0_3_,
+        plats1_.id as id1_0_3_,
+        plats1_.id as id1_0_0_,
+        plats1_.disponible as disponib2_0_0_,
+        plats1_.name as name3_0_0_,
+        plats1_.price as price4_0_0_,
+        plats1_.restaurant_id as restaura5_0_0_ 
     from
-        plats plats0_ 
+        restaurants restaurant0_ 
+    left outer join
+        plats plats1_ 
+            on restaurant0_.id=plats1_.restaurant_id 
     where
-        plats0_.restaurant_id=?
+        restaurant0_.id=?
+Hibernate: 
+    insert 
+    into
+        restaurants
+        (id, name) 
+    values
+        (default, ?)
 Hibernate: 
     select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
+        plat0_.id as id1_0_0_,
+        plat0_.disponible as disponib2_0_0_,
+        plat0_.name as name3_0_0_,
+        plat0_.price as price4_0_0_,
+        plat0_.restaurant_id as restaura5_0_0_ 
     from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
+        plats plat0_ 
     where
-        plats0_.restaurant_id=?
+        plat0_.id=?
+Hibernate: 
+    insert 
+    into
+        plats
+        (id, disponible, name, price, restaurant_id) 
+    values
+        (default, ?, ?, ?, ?)
 Hibernate: 
     select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
+        plat0_.id as id1_0_0_,
+        plat0_.disponible as disponib2_0_0_,
+        plat0_.name as name3_0_0_,
+        plat0_.price as price4_0_0_,
+        plat0_.restaurant_id as restaura5_0_0_ 
     from
-        plats plats0_ 
+        plats plat0_ 
     where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        restaurant0_.id as id1_1_,
-        restaurant0_.name as name2_1_ 
-    from
-        restaurants restaurant0_
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
-Hibernate: 
-    select
-        plats0_.restaurant_id as restaura5_0_0_,
-        plats0_.id as id1_0_0_,
-        plats0_.id as id1_0_1_,
-        plats0_.disponible as disponib2_0_1_,
-        plats0_.name as name3_0_1_,
-        plats0_.price as price4_0_1_,
-        plats0_.restaurant_id as restaura5_0_1_ 
-    from
-        plats plats0_ 
-    where
-        plats0_.restaurant_id=?
+        plat0_.id=?
+Hibernate: 
+    insert 
+    into
+        plats
+        (id, disponible, name, price, restaurant_id) 
+    values
+        (default, ?, ?, ?, ?)
+2025-11-01 10:08:07.730  INFO 647 --- [           main] c.s.m.i.p.RestaurantDataLoader           : 💾 Successfully loaded 3 restaurants into H2 DATABASE from restaurants-h2.json
+2025-11-01 10:08:07.732  INFO 647 --- [           main] c.s.m.i.p.RestaurantDataLoader           : 💾 H2 Database contains: [Le Gourmet H2, Sushi Master H2, Burger Palace H2]
+2025-11-01 10:08:07.913  INFO 647 --- [nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-01 10:08:07.915  INFO 647 --- [nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-01 10:08:07.919  INFO 647 --- [nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-11-01 10:08:08.266  INFO 647 --- [nio-8088-exec-1] c.s.m.controllers.RestaurantController   : 📡 API: GET /restaurants (using configured strategy)
+2025-11-01 10:08:08.304  INFO 647 --- [nio-8088-exec-1] c.s.menu.services.RestaurantService      : 🔧 Service: Getting all restaurants using strategy: JSON
+2025-11-01 10:08:08.327  INFO 647 --- [nio-8088-exec-1] .s.m.i.p.JsonRestaurantRepositoryAdapter : 📄 JSON Adapter: Finding all restaurants
+2025-11-01 10:08:08.328  INFO 647 --- [nio-8088-exec-1] c.s.m.controllers.RestaurantController   : 📡 API: Returning 2 restaurants

@@ -24,6 +24,24 @@ services:
     tty: true
     networks:
       - soa-network
+    command: >
+      bash -c "
+        echo '🚀 Starting Spring Boot backend...' &&
+        cd /workspace/menu_java &&
+        mvn spring-boot:run > /workspace/spring-boot.log 2>&1 &
+        echo '⏳ Waiting for Spring Boot to start...' &&
+        sleep 10 &&
+        echo '🎨 Starting Angular frontend...' &&
+        cd /workspace/speedliv-client &&
+        ng serve --host 0.0.0.0 --port 4200 > /workspace/angular.log 2>&1 &
+        echo '✅ Both servers are starting!' &&
+        echo '   Backend: http://localhost:8088' &&
+        echo '   Frontend: http://localhost:4200' &&
+        echo '   Check logs: docker exec soa_tp_dev tail -f /workspace/spring-boot.log' &&
+        echo '              docker exec soa_tp_dev tail -f /workspace/angular.log' &&
+        tail -f /dev/null
+      "
+
 
   # Optional: Separate H2 database service (if you want external H2)
   h2-database:

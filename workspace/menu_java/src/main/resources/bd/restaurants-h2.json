@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Le Gourmet H2",
+    "plats": [
+      {
+        "id": 1,
+        "name": "Coq au Vin",
+        "price": 18.50,
+        "disponible": true
+      },
+      {
+        "id": 2,
+        "name": "Bouillabaisse",
+        "price": 22.00,
+        "disponible": true
+      },
+      {
+        "id": 3,
+        "name": "Ratatouille",
+        "price": 14.50,
+        "disponible": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Sushi Master H2",
+    "plats": [
+      {
+        "id": 4,
+        "name": "Dragon Roll",
+        "price": 16.00,
+        "disponible": true
+      },
+      {
+        "id": 5,
+        "name": "Tempura Udon",
+        "price": 13.50,
+        "disponible": true
+      },
+      {
+        "id": 6,
+        "name": "Chirashi Bowl",
+        "price": 19.00,
+        "disponible": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Burger Palace H2",
+    "plats": [
+      {
+        "id": 7,
+        "name": "Classic Cheeseburger",
+        "price": 12.00,
+        "disponible": true
+      },
+      {
+        "id": 8,
+        "name": "BBQ Bacon Burger",
+        "price": 14.50,
+        "disponible": true
+      }
+    ]
+  }
+]

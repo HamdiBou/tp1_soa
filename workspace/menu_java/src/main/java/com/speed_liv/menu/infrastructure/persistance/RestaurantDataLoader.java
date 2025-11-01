@@ -15,7 +15,8 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
- * Data loader to initialize the database with data from JSON file
+ * Data loader to initialize H2 database with data from restaurants-h2.json file
+ * This loads DIFFERENT data than the JSON adapter
  */
 @Component
 public class RestaurantDataLoader implements CommandLineRunner {
@@ -38,7 +39,8 @@ public class RestaurantDataLoader implements CommandLineRunner {
 
     private void loadRestaurantsFromJson() {
         try {
-            ClassPathResource resource = new ClassPathResource("bd/restaurants.json");
+            // Load from restaurants-h2.json (different from JSON adapter)
+            ClassPathResource resource = new ClassPathResource("bd/restaurants-h2.json");
             InputStream inputStream = resource.getInputStream();
             
             List<Restaurant> restaurants = objectMapper.readValue(
@@ -51,10 +53,11 @@ public class RestaurantDataLoader implements CommandLineRunner {
                 restaurantRepository.save(restaurant);
             }
             
-            logger.info("Successfully loaded {} restaurants from JSON file", restaurants.size());
+            logger.info("💾 Successfully loaded {} restaurants into H2 DATABASE from restaurants-h2.json", restaurants.size());
+            logger.info("💾 H2 Database contains: {}", restaurants.stream().map(Restaurant::getName).toList());
             
         } catch (IOException e) {
-            logger.error("Failed to load restaurants from JSON file", e);
+            logger.error("❌ Failed to load restaurants into H2 from JSON file", e);
         }
     }
 }

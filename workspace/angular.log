@@ -1,15 +1,22 @@
-Warning: Running a server with --disable-host-check is a security risk. See https://medium.com/webpack/webpack-dev-server-middleware-security-issues-1489d950874a for more information.
-The "disableHostCheck" option will not be used because it is not supported by the "@angular-devkit/build-angular:application" builder.
+
+Warning: This is a simple server for use in testing or debugging Angular applications
+locally. It hasn't been reviewed for security issues.
+
+Binding this server to an open connection can result in compromising your application or
+computer. Using a different host than the one passed to the "--host" flag might result in
+websocket connection issues. You might need to use "--disable-host-check" if that's the
+case.
+    
 - Building...
 
 Initial chunk files | Names         |  Raw size
 polyfills.js        | polyfills     |  88.09 kB | 
-main.js             | main          |  29.92 kB | 
+main.js             | main          |  34.05 kB | 
 styles.css          | styles        |  95 bytes | 
 
-                    | Initial total | 118.10 kB
+                    | Initial total | 122.23 kB
 
-Application bundle generation complete. [16.944 seconds]
+Application bundle generation complete. [36.284 seconds]
 
 ▲ [WARNING] NG8107: The left side of this optional chain operation does not include 'null' or 'undefined' in its type, therefore the '?.' operator can be replaced with the '.' operator. [plugin angular-compiler]
 
@@ -19,11 +26,11 @@ Application bundle generation complete. [16.944 seconds]
 
   Error occurs in the template of component AppComponent.
 
-    src/app/app.component.ts:12:15:
-      12 │   templateUrl: './app.component.html',
+    src/app/app.component.ts:11:15:
+      11 │   templateUrl: './app.component.html',
          ╵                ~~~~~~~~~~~~~~~~~~~~~~
 
 
 Watch mode enabled. Watching for file changes...
   ➜  Local:   http://localhost:4200/
-  ➜  Network: http://172.19.0.3:4200/
+  ➜  Network: http://172.18.0.3:4200/
